@@ -101,21 +101,4 @@ $(document).ready(function() {
             $('#slide-down').slideUp(150).removeClass('open')
         }
     });
-    $('#primary-nav .blogs').on('click', function(e) {
-        e.preventDefault();
-        $('#primary-nav .blogs').siblings().removeClass('active');
-        $('#primary-nav .blogs').toggleClass('active');
-        if ($('#primary-nav .blogs').hasClass('active')) {
-            if ($('#slide-down').hasClass('open')) {
-                $('#slide-down .drop.open').hide().removeClass('open');
-                $('.drop.blogs').show().addClass('open')
-            } else {
-                $('#slide-down .drop').hide();
-                $('.drop.blogs').show().addClass('open');
-                $('#slide-down').slideDown(150).addClass('open')
-            }
-        } else {
-            $('#slide-down').slideUp(150).removeClass('open')
-        }
-    })
 });
