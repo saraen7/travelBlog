@@ -1,0 +1,12 @@
+To Do:
+
+Add a "featured" carousel for the home page
+
+Add a "Home" button to the nav
+
+Write out at least two articles 
+
+Then templatize an article page and create a coming soon page for the other articles
+
+Add more N. America places and create a carousel withint the menu
+

@@ -139,6 +139,14 @@
 }
 
 /* Article Thumbs */
+#container {
+	background-color: #666;
+	height: 500px;
+	margin: auto;
+	padding: 25px;
+	margin-top: 25px;
+}
+
 .article-thumbs {
 	margin: 0 -5px;
 }
@@ -183,4 +191,19 @@
 /* Main Article */
 article.main header h1 {
 	font-size: 2.5em;
+}
+
+form {
+	display: inline-block;
+	text-align: center;
+}
+
+#image-to-vote-on {
+	position: absolute;
+
+}
+
+#image-to-vote-on, img {
+	display: block;
+	margin: 0 auto;
 }
