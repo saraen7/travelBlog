@@ -141,7 +141,6 @@
 /* Article Thumbs */
 #container {
 	background-color: #666;
-	height: 500px;
 	margin: auto;
 	padding: 25px;
 	margin-top: 25px;
@@ -194,16 +193,21 @@ article.main header h1 {
 }
 
 form {
-	display: inline-block;
 	text-align: center;
+	padding: 25px;
 }
 
-#image-to-vote-on {
-	position: absolute;
-
+#caption, #caption>p {
+	text-align: center;
+	padding: 0;
+	margin: 0;
 }
 
-#image-to-vote-on, img {
+#main {
+	padding-bottom: 25px;
+}
+
+img {
 	display: block;
 	margin: 0 auto;
 }
