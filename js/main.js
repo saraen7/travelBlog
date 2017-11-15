@@ -1,4 +1,49 @@
+var japanImages = ["images/japanImages/tokyoCherryBlossoms.jpg","images/japanImages/tokyoPerfectFruit.jpg","images/japanImages/tokyoSushiTuna.jpg","images/japanImages/tokyoSushi.jpg","images/japanImages/tokyoKillBill.jpg","images/japanImages/tokyoGrumpyCat.jpg","images/japanImages/kyotoBag.jpg","images/japanImages/kyotoHotel.jpg","images/japanImages/kyotoTemple.jpg"];
+
+var japanText = [
+  "Cherry Blossoms in Yoyogi Park, Shibuya, Tokyo.",
+  "The Japanese have an obsession with perfection including perfect produce. The canalopes pictured here sold for approximately $60 each. Our hosts explained that these were primarily bought to impress professional contacts.",
+  "The sushi was amazingly fresh in Japan. At the top of this image are three different fattiness levels of tuna.",
+  "Sushi could also come via conveyer belt. At this Tokyo restaurant, orders placed directly on a tablet were prepared in the kitchen and then whisked to each diner on an electric tray.", "The restaurant shown in Kill Bill.",
+  "Grumpy cat latte art.", "Some western cultural icons were very popular in Japan. I saw Tommy Lee Jones' picture every day of the trip. There were also odd bits of Americana like this bag pictured above.",
+  "The traditional Japanese style hotel that we stayed at in Kyoto.",
+  "The Fushimi Inari-taisha Shrine in Kyoto."];
+
+var i=0;
+
+function previousImage(imageArray, textArray){
+	if(i<imageArray.length && i>0){
+		i--;
+		$("#image-to-vote-on").attr("src",imageArray[i]);
+    $("#caption p").text(textArray[i]);
+	}else{
+		i=imageArray.length-1;
+		$("#image-to-vote-on").attr("src",imageArray[i]);
+    $("#caption p").text(textArray[i]);
+	}
+}
+function nextImage(imageArray, textArray){
+  console.log("hello world");
+	if(i<imageArray.length-1){
+		i++;
+		$("#image-to-vote-on").attr("src",imageArray[i]);
+    $("#caption p").text(textArray[i]);
+	}else{
+		i-=imageArray.length-1;
+		$("#image-to-vote-on").attr("src",imageArray[i]);
+    $("#caption p").text(textArray[i]);
+	}
+}
+
 $(document).ready(function() {
+
+
+
+  $("#buttons-wrapper .btn[value='Forward']").on("click",function(){nextImage(japanImages, japanText)});
+  $("#buttons-wrapper .btn[value='Back']").on("click",function(){previousImage(japanImages, japanText)});
+
+
+
     $('#primary-nav .africa').on('click', function(e) {
         e.preventDefault();
         $('#primary-nav .africa').siblings().removeClass('active');
@@ -101,47 +146,5 @@ $(document).ready(function() {
             $('#slide-down').slideUp(150).removeClass('open')
         }
     });
-});
 
-var japanImages = ["images/japanImages/tokyoCherryBlossoms.jpg","images/japanImages/tokyoPerfectFruit.jpg","images/japanImages/tokyoSushiTuna.jpg","images/japanImages/tokyoSushi.jpg","images/japanImages/tokyoKillBill.jpg","images/japanImages/tokyoGrumpyCat.jpg","images/japanImages/kyotoBag.jpg","images/japanImages/kyotoHotel.jpg","images/japanImages/kyotoTemple.jpg"]; //the image array
-
-//Clicking on the forward button moves to the next image in queue and sets the score for the previous image to 0.
-  $("#forward").on("click",function(){
-    if($("#image-to-vote-on").hasClass("image1")){
-    $("#image-to-vote-on").attr("src",japanImages[1]).addClass("image2").removeClass("image1");
-  } else if($("#image-to-vote-on").hasClass("image2")){
-    $("#image-to-vote-on").attr("src",japanImages[2]).addClass("image3").removeClass("image2");
-  } else if($("#image-to-vote-on").hasClass("image3")){
-    $("#image-to-vote-on").attr("src",japanImages[3]).addClass("image4").removeClass("image3");
-  } else if($("#image-to-vote-on").hasClass("image4")){
-    $("#image-to-vote-on").attr("src",japanImages[4]).addClass("image5").removeClass("image4");
-  } else if($("#image-to-vote-on").hasClass("image5")){
-    $("#image-to-vote-on").attr("src",japanImages[5]).addClass("image6").removeClass("image5");
-  } else if($("#image-to-vote-on").hasClass("image6")){
-    $("#image-to-vote-on").attr("src",japanImages[6]).addClass("image7").removeClass("image6");
-  } else if($("#image-to-vote-on").hasClass("image7")){
-    $("#image-to-vote-on").attr("src",japanImages[7]).addClass("image8").removeClass("image7");
-  } else {/*($("#image-to-vote-on").hasClass("image8")){*/
-    $("#image-to-vote-on").attr("src",japanImages[8]).addClass("image9").removeClass("image8");
-  }
-  });
-
-  //Clicking on the back button moves to the previous image in queue.
-    $("#back").on("click",function(){
-      if($("#image-to-vote-on").hasClass("image8")){
-      $(".announcement").text("");
-      $("#image-to-vote-on").attr("src",images[6]).addClass("image7").removeClass("image8");
-    } else if($("#image-to-vote-on").hasClass("image7")){
-      $("#image-to-vote-on").attr("src",images[5]).addClass("image6").removeClass("image7");
-    } else if($("#image-to-vote-on").hasClass("image6")){
-      $("#image-to-vote-on").attr("src",images[4]).addClass("image5").removeClass("image6");
-    } else if($("#image-to-vote-on").hasClass("image5")){
-      $("#image-to-vote-on").attr("src",images[3]).addClass("image4").removeClass("image5");
-    } else if($("#image-to-vote-on").hasClass("image4")){
-      $("#image-to-vote-on").attr("src",images[2]).addClass("image3").removeClass("image4");
-    } else if($("#image-to-vote-on").hasClass("image3")){
-      $("#image-to-vote-on").attr("src",images[1]).addClass("image2").removeClass("image3");
-    } else {
-      $("#image-to-vote-on").attr("src",images[0]).addClass("image1").removeClass("image2");
-    }
-    });
+}); //end Document Ready
