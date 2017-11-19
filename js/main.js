@@ -1,3 +1,22 @@
+//Image and Captain arrays
+var kyotoImages = ["images/kyotoImages/kyotoTemple.jpg", "images/kyotoImages/kyotoHotel.jpg"];
+
+var kyotoText = ["The Fushimi Inari-taisha Shrine in Kyoto.",
+"The traditional Japanese style hotel that we stayed at in Kyoto."];
+
+var londonImages = ["images/londonImages/kensingtonGarden.jpg", "images/londonImages/britishMuseum.jpg", "images/londonImages/rosettaStone.jpg", "images/londonImages/globeTheater2.jpg", "images/londonImages/globeTheater.jpg", "images/londonImages/ukPhones.jpg"];
+
+var londonText = ["Kensington Gardens outside of Kensington Palace in Hyde Park.",
+"Atrium of the British Museum.",
+"The Rosetta Stone in the British Museum.",
+"The stage of the Globe Theater.",
+"The painted ceiling of the Globe Theater stage.",
+"London phone booths outside of Buckingham Palace."];
+
+var lucerneImages = ["images/lucerneImages/lucerneRestaurant.jpg", "images/lucerneImages/swissTrain.jpg", "images/lucerneImages/swissMountain.jpg"];
+
+var lucerneText = ["A restaurant in downtown Lucerne.", "The view out of the train window to the top of a mountain just outside of Lucerne.", "The Swiss flag in the Alps."];
+
 var tokyoImages = ["images/tokyoImages/tokyoCherryBlossoms.jpg","images/tokyoImages/tokyoPerfectFruit.jpg","images/tokyoImages/tokyoSushiTuna.jpg","images/tokyoImages/tokyoSushi.jpg","images/tokyoImages/tokyoKillBill.jpg","images/tokyoImages/tokyoGrumpyCat.jpg","images/tokyoImages/kyotoBag.jpg"];
 
 var tokyoText = [
@@ -6,11 +25,6 @@ var tokyoText = [
   "The sushi was amazingly fresh in Japan. At the top of this image are three different fattiness levels of tuna.",
   "Sushi could also come via conveyer belt. At this Tokyo restaurant, orders placed directly on a tablet were prepared in the kitchen and then whisked to each diner on an electric tray.", "The restaurant shown in Kill Bill.",
   "Grumpy cat latte art.", "Some western cultural icons were very popular in Japan. I saw Tommy Lee Jones' picture every day of the trip. There were also odd bits of Americana like this bag pictured above."];
-
-var kyotoImages = ["images/kyotoImages/kyotoHotel.jpg","images/kyotoImages/kyotoTemple.jpg"];
-
-var kyotoText = ["The traditional Japanese style hotel that we stayed at in Kyoto.",
-"The Fushimi Inari-taisha Shrine in Kyoto."];
 
 var i=0;
 
@@ -39,13 +53,17 @@ function nextImage(imageArray, textArray){
 }
 
 $(document).ready(function() {
+  $("#buttons-wrapper.kyoto .btn[value='Forward']").on("click",function(){nextImage(kyotoImages, kyotoText)});
+  $("#buttons-wrapper.kyoto .btn[value='Back']").on("click",function(){previousImage(kyotoImages, kyotoText)});
 
+  $("#buttons-wrapper.london .btn[value='Forward']").on("click",function(){nextImage(londonImages, londonText)});
+  $("#buttons-wrapper.london .btn[value='Back']").on("click",function(){previousImage(londonImages, londonText)});
 
+  $("#buttons-wrapper.lucerne .btn[value='Forward']").on("click",function(){nextImage(lucerneImages, lucerneText)});
+  $("#buttons-wrapper.lucerne .btn[value='Back']").on("click",function(){previousImage(lucerneImages, lucerneText)});
 
-  $("#buttons-wrapper .btn[value='Forward']").on("click",function(){nextImage(tokyoImages, tokyoText)});
-  $("#buttons-wrapper .btn[value='Back']").on("click",function(){previousImage(tokyoImages, tokyoText)});
-
-
+  $("#buttons-wrapper.tokyo .btn[value='Forward']").on("click",function(){nextImage(tokyoImages, tokyoText)});
+  $("#buttons-wrapper.tokyo .btn[value='Back']").on("click",function(){previousImage(tokyoImages, tokyoText)});
 
     $('#primary-nav .africa').on('click', function(e) {
         e.preventDefault();

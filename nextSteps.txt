@@ -12,3 +12,4 @@ Add more N. America places and create a carousel withint the menu
 
 Eventually change Nav to be replicated using PHP. Maybe use this tutorial: http://www.apaddedcell.com/how-automatically-include-your-header-navigation-and-footer-every-page
 
+
