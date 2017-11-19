@@ -1,4 +1,8 @@
 //Image and Captain arrays
+var assateagueImages = ["images/assateagueImages/photo1.jpg", "images/assateagueImages/photo2.jpg"];
+
+var assateagueText = ["Group camping at Assateague National Park in Maryland.", "Wild ponies on Assateague Island."];
+
 var kyotoImages = ["images/kyotoImages/kyotoTemple.jpg", "images/kyotoImages/kyotoHotel.jpg"];
 
 var kyotoText = ["The Fushimi Inari-taisha Shrine in Kyoto.",
@@ -16,6 +20,14 @@ var londonText = ["Kensington Gardens outside of Kensington Palace in Hyde Park.
 var lucerneImages = ["images/lucerneImages/lucerneRestaurant.jpg", "images/lucerneImages/swissTrain.jpg", "images/lucerneImages/swissMountain.jpg"];
 
 var lucerneText = ["A restaurant in downtown Lucerne.", "The view out of the train window to the top of a mountain just outside of Lucerne.", "The Swiss flag in the Alps."];
+
+var orstaImages = ["images/orstaImages/norway1.jpg", "images/orstaImages/norwayCabin.jpg", "images/orstaImages/norwayFarm.jpg", "images/orstaImages/norwayHouse.jpg"];
+
+var orstaText = ["Lake Lyngstøylvatnet in Ørsta.", "A family member's cabin just outside of Ørsta.", "A building on my great grandfather's property in Ørsta.", "The third floor attic at my great, great grandparents' home in Ørsta."];
+
+var seattleImages = ["images/seattleImages/seattleEastofHere.jpg", "images/seattleImages/seattleGumWall.jpg", "images/seattleImages/seattleAirBnB.jpg"];
+
+var seattleText = ["Exploring the Queen Anne neighborhood in Seattle.", "The Gum Wall near Pike Place market.", "We stayed at an AirB&B during our trip and couldn't recommend the experience more."];
 
 var tokyoImages = ["images/tokyoImages/tokyoCherryBlossoms.jpg","images/tokyoImages/tokyoPerfectFruit.jpg","images/tokyoImages/tokyoSushiTuna.jpg","images/tokyoImages/tokyoSushi.jpg","images/tokyoImages/tokyoKillBill.jpg","images/tokyoImages/tokyoGrumpyCat.jpg","images/tokyoImages/kyotoBag.jpg"];
 
@@ -53,6 +65,9 @@ function nextImage(imageArray, textArray){
 }
 
 $(document).ready(function() {
+  $("#buttons-wrapper.assateague .btn[value='Forward']").on("click",function(){nextImage(assateagueImages, assateagueText)});
+  $("#buttons-wrapper.assateague .btn[value='Back']").on("click",function(){previousImage(assateagueImages, assateagueText)});
+
   $("#buttons-wrapper.kyoto .btn[value='Forward']").on("click",function(){nextImage(kyotoImages, kyotoText)});
   $("#buttons-wrapper.kyoto .btn[value='Back']").on("click",function(){previousImage(kyotoImages, kyotoText)});
 
@@ -61,6 +76,12 @@ $(document).ready(function() {
 
   $("#buttons-wrapper.lucerne .btn[value='Forward']").on("click",function(){nextImage(lucerneImages, lucerneText)});
   $("#buttons-wrapper.lucerne .btn[value='Back']").on("click",function(){previousImage(lucerneImages, lucerneText)});
+
+  $("#buttons-wrapper.orsta .btn[value='Forward']").on("click",function(){nextImage(orstaImages, orstaText)});
+  $("#buttons-wrapper.orsta .btn[value='Back']").on("click",function(){previousImage(orstaImages, orstaText)});
+
+  $("#buttons-wrapper.seattle .btn[value='Forward']").on("click",function(){nextImage(seattleImages, seattleText)});
+  $("#buttons-wrapper.seattle .btn[value='Back']").on("click",function(){previousImage(seattleImages, seattleText)});
 
   $("#buttons-wrapper.tokyo .btn[value='Forward']").on("click",function(){nextImage(tokyoImages, tokyoText)});
   $("#buttons-wrapper.tokyo .btn[value='Back']").on("click",function(){previousImage(tokyoImages, tokyoText)});
