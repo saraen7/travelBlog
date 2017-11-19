@@ -3,6 +3,10 @@ var assateagueImages = ["images/assateagueImages/photo1.jpg", "images/assateague
 
 var assateagueText = ["Group camping at Assateague National Park in Maryland.", "Wild ponies on Assateague Island."];
 
+var incaTrailImages = ["images/incaTrailImages/incaTrailStart.jpg", "images/incaTrailImages/incaTrailStart2.jpg", "images/incaTrailImages/incaTrail.jpg", "images/incaTrailImages/incaTrail2.jpg", "images/incaTrailImages/incaTrail3.jpg", "images/incaTrailImages/machuPicchu.jpg"];
+
+var incaTrailText = ["The sign at the head of the Inca Trail.", "The map at the head of the Inca Trail.", "View from the Inca Trail.", "The Inca Trail goes through multiple ecospheres. Here is a lower altitude, jungle view from the trail.", "Dawn on the trail. Day 4.", "Machu Picchu at mid-morning."];
+
 var kyotoImages = ["images/kyotoImages/kyotoTemple.jpg", "images/kyotoImages/kyotoHotel.jpg"];
 
 var kyotoText = ["The Fushimi Inari-taisha Shrine in Kyoto.",
@@ -21,9 +25,17 @@ var lucerneImages = ["images/lucerneImages/lucerneRestaurant.jpg", "images/lucer
 
 var lucerneText = ["A restaurant in downtown Lucerne.", "The view out of the train window to the top of a mountain just outside of Lucerne.", "The Swiss flag in the Alps."];
 
+var montrealImages = ["images/montrealImages/f1.jpg"];
+
+var montrealText = ["Lewis Hamilton, winner of the 2015 Canadian Grand Prix."]
+
 var orstaImages = ["images/orstaImages/norway1.jpg", "images/orstaImages/norwayCabin.jpg", "images/orstaImages/norwayFarm.jpg", "images/orstaImages/norwayHouse.jpg"];
 
 var orstaText = ["Lake Lyngstøylvatnet in Ørsta.", "A family member's cabin just outside of Ørsta.", "A building on my great grandfather's property in Ørsta.", "The third floor attic at my great, great grandparents' home in Ørsta."];
+
+var puntaCanaImages = ["images/puntaCanaImages/resort.jpg", "images/puntaCanaImages/balcony.jpg"];
+
+var puntaCanaText = ["1960s resort in Punta Cana.", "1960s resort in Punta Cana."];
 
 var seattleImages = ["images/seattleImages/seattleEastofHere.jpg", "images/seattleImages/seattleGumWall.jpg", "images/seattleImages/seattleAirBnB.jpg"];
 
@@ -68,6 +80,9 @@ $(document).ready(function() {
   $("#buttons-wrapper.assateague .btn[value='Forward']").on("click",function(){nextImage(assateagueImages, assateagueText)});
   $("#buttons-wrapper.assateague .btn[value='Back']").on("click",function(){previousImage(assateagueImages, assateagueText)});
 
+  $("#buttons-wrapper.incaTrail .btn[value='Forward']").on("click",function(){nextImage(incaTrailImages, incaTrailText)});
+  $("#buttons-wrapper.incaTrail .btn[value='Back']").on("click",function(){previousImage(incaTrailImages, incaTrailText)});
+
   $("#buttons-wrapper.kyoto .btn[value='Forward']").on("click",function(){nextImage(kyotoImages, kyotoText)});
   $("#buttons-wrapper.kyoto .btn[value='Back']").on("click",function(){previousImage(kyotoImages, kyotoText)});
 
@@ -77,8 +92,14 @@ $(document).ready(function() {
   $("#buttons-wrapper.lucerne .btn[value='Forward']").on("click",function(){nextImage(lucerneImages, lucerneText)});
   $("#buttons-wrapper.lucerne .btn[value='Back']").on("click",function(){previousImage(lucerneImages, lucerneText)});
 
+  $("#buttons-wrapper.montreal .btn[value='Forward']").on("click",function(){nextImage(montrealImages, montrealText)});
+  $("#buttons-wrapper.montreal .btn[value='Back']").on("click",function(){previousImage(montrealImages, montrealText)});
+
   $("#buttons-wrapper.orsta .btn[value='Forward']").on("click",function(){nextImage(orstaImages, orstaText)});
   $("#buttons-wrapper.orsta .btn[value='Back']").on("click",function(){previousImage(orstaImages, orstaText)});
+
+  $("#buttons-wrapper.puntaCana .btn[value='Forward']").on("click",function(){nextImage(puntaCanaImages, puntaCanaText)});
+  $("#buttons-wrapper.puntaCana .btn[value='Back']").on("click",function(){previousImage(puntaCanaImages, puntaCanaText)});
 
   $("#buttons-wrapper.seattle .btn[value='Forward']").on("click",function(){nextImage(seattleImages, seattleText)});
   $("#buttons-wrapper.seattle .btn[value='Back']").on("click",function(){previousImage(seattleImages, seattleText)});
