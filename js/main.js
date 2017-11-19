@@ -1,13 +1,16 @@
-var japanImages = ["images/japanImages/tokyoCherryBlossoms.jpg","images/japanImages/tokyoPerfectFruit.jpg","images/japanImages/tokyoSushiTuna.jpg","images/japanImages/tokyoSushi.jpg","images/japanImages/tokyoKillBill.jpg","images/japanImages/tokyoGrumpyCat.jpg","images/japanImages/kyotoBag.jpg","images/japanImages/kyotoHotel.jpg","images/japanImages/kyotoTemple.jpg"];
+var tokyoImages = ["images/tokyoImages/tokyoCherryBlossoms.jpg","images/tokyoImages/tokyoPerfectFruit.jpg","images/tokyoImages/tokyoSushiTuna.jpg","images/tokyoImages/tokyoSushi.jpg","images/tokyoImages/tokyoKillBill.jpg","images/tokyoImages/tokyoGrumpyCat.jpg","images/tokyoImages/kyotoBag.jpg"];
 
-var japanText = [
+var tokyoText = [
   "Cherry Blossoms in Yoyogi Park, Shibuya, Tokyo.",
   "The Japanese have an obsession with perfection including perfect produce. The canalopes pictured here sold for approximately $60 each. Our hosts explained that these were primarily bought to impress professional contacts.",
   "The sushi was amazingly fresh in Japan. At the top of this image are three different fattiness levels of tuna.",
   "Sushi could also come via conveyer belt. At this Tokyo restaurant, orders placed directly on a tablet were prepared in the kitchen and then whisked to each diner on an electric tray.", "The restaurant shown in Kill Bill.",
-  "Grumpy cat latte art.", "Some western cultural icons were very popular in Japan. I saw Tommy Lee Jones' picture every day of the trip. There were also odd bits of Americana like this bag pictured above.",
-  "The traditional Japanese style hotel that we stayed at in Kyoto.",
-  "The Fushimi Inari-taisha Shrine in Kyoto."];
+  "Grumpy cat latte art.", "Some western cultural icons were very popular in Japan. I saw Tommy Lee Jones' picture every day of the trip. There were also odd bits of Americana like this bag pictured above."];
+
+var kyotoImages = ["images/kyotoImages/kyotoHotel.jpg","images/kyotoImages/kyotoTemple.jpg"];
+
+var kyotoText = ["The traditional Japanese style hotel that we stayed at in Kyoto.",
+"The Fushimi Inari-taisha Shrine in Kyoto."];
 
 var i=0;
 
@@ -39,8 +42,8 @@ $(document).ready(function() {
 
 
 
-  $("#buttons-wrapper .btn[value='Forward']").on("click",function(){nextImage(japanImages, japanText)});
-  $("#buttons-wrapper .btn[value='Back']").on("click",function(){previousImage(japanImages, japanText)});
+  $("#buttons-wrapper .btn[value='Forward']").on("click",function(){nextImage(tokyoImages, tokyoText)});
+  $("#buttons-wrapper .btn[value='Back']").on("click",function(){previousImage(tokyoImages, tokyoText)});
 
 
 

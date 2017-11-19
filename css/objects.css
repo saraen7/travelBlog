@@ -80,6 +80,9 @@
 /* Main */
 #main {
 	margin-top: 20px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 25px;
 }
 
 /* User Nav */
@@ -194,7 +197,14 @@ article.main header h1 {
 
 form {
 	text-align: center;
-	padding: 25px;
+	padding-top: 25px;
+}
+
+input {
+	background-color: white;
+	color: #666;
+	height: 40px;
+	width: 80px;
 }
 
 #caption, #caption>p {
@@ -203,11 +213,17 @@ form {
 	margin: 0;
 }
 
-#main {
-	padding-bottom: 25px;
-}
-
 img {
 	display: block;
+	margin: 0 auto;
+}
+
+#caption > p {
+	padding-top: 20px;
+	color: white;
+}
+
+#center {
+	width: 900px;
 	margin: 0 auto;
 }
