@@ -50,6 +50,10 @@ var tokyoText = [
   "Sushi could also come via conveyer belt. At this Tokyo restaurant, orders placed directly on a tablet were prepared in the kitchen and then whisked to each diner on an electric tray.", "The restaurant shown in Kill Bill.",
   "Grumpy cat latte art.", "Some western cultural icons were very popular in Japan. I saw Tommy Lee Jones' picture every day of the trip. There were also odd bits of Americana like this bag pictured above."];
 
+  var homeImages = [kyotoImages[0], orstaImages[0], incaTrailImages[5]];
+
+  var homeText = [kyotoText[0], orstaText[0], incaTrailText[5]];
+
 var i=0;
 
 function previousImage(imageArray, textArray){
@@ -106,6 +110,9 @@ $(document).ready(function() {
 
   $("#buttons-wrapper.tokyo .btn[value='Forward']").on("click",function(){nextImage(tokyoImages, tokyoText)});
   $("#buttons-wrapper.tokyo .btn[value='Back']").on("click",function(){previousImage(tokyoImages, tokyoText)});
+
+  $("#buttons-wrapper.home .btn[value='Forward']").on("click",function(){nextImage(homeImages, homeText)});
+  $("#buttons-wrapper.home .btn[value='Back']").on("click",function(){previousImage(homeImages, homeText)});
 
     $('#primary-nav .africa').on('click', function(e) {
         e.preventDefault();
